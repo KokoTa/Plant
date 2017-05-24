@@ -1,0 +1,141 @@
+/* 全局简单样式设定 */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+}
+html, body, .wrap{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	background: black;
+	background: url('../img/Index/1.jpg') no-repeat fixed center;
+	background-size: cover;
+}
+
+/* 标题栏 */
+.header {
+	background: black;
+	color: #B8F3FF;
+}
+.header .headerWrap {
+	width: 85%;
+	margin: 0 auto;
+}
+.headerWrap img {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.headerWrap span {
+	font-size: 3em;
+	line-height: 1.5em;
+}
+.headerWrap ul {
+	float: right;
+}
+.headerWrap li {
+	list-style: none;
+	float: left;
+	font-size: 18px;
+	line-height: 55px;
+	padding: 0 20px;
+	transition: all 1s;
+}
+.headerWrap li a {
+	text-decoration: none;
+	color: #B8F3FF;
+}
+.headerWrap li:hover {
+	background: #63768D;
+}
+
+/* 页面主体（麻烦） */
+article, .body {
+	width: 85%;
+	margin: 0 auto;
+	min-height: 100%; /* 技巧 */
+	margin-top: -110px;
+}
+
+/* 导航栏 */
+.body ul {
+	width: 200px;
+	margin-top: 110px;
+	float: left;
+}
+.body ul li {
+	list-style: none;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	background: transparent;
+	transition: all 1s;
+	position: relative;
+}
+.body ul li:hover {
+	background: rgba(255,255,255,0.5);
+	cursor: pointer;
+}
+.body ul li a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	font-size: 5em;
+	line-height: 200px;
+	color: transparent;
+	transition: all 1s;
+}
+.body ul li:hover > a {
+ 	color: #B8F3FF;
+}
+.body ul li:hover > span {
+	color: white;
+}
+.body ul li span {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	font-size: 1.5em;
+	color: transparent;
+	position: absolute;
+	left: 50px;
+	bottom: 30px;
+	transition: all 1s;
+}
+
+/* 页脚 */
+.footer {
+	color: white;
+	height: 55px;
+	background: black;
+	font-size: 1.2em;
+	line-height: 55px;
+	text-align: center;
+	clear: both;
+}
+
+/* 图片栏 */
+.pic ul {
+	margin-top: 110px;
+	float: right;
+}
+.pic li {
+	list-style: none;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	opacity: 0;
+	transition: all 1s;
+}
+.pic li img {
+	max-width:100%;
+	max-height:100%;
+	vertical-align: middle;
+}
+.pic li:hover {
+	opacity: 1;
+}

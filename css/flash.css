@@ -1,0 +1,17 @@
+/* Flash */
+.flash {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: -200px;
+	transition: all 1.5s;
+}
+.remove {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.getFlash:hover {
+	cursor: pointer;
+}
