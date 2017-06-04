@@ -5,15 +5,16 @@
 	<title>植物园</title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" type="text/css" href="./css/animate/animate.min.css">
-	<script type="text/javascript" src="./js/wow/dist/wow.min.js"></script>
+	<link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 <body>
-	
-	<div class="wrap wow fadeIn" data-wow-duration="3s">
+	<audio src="./flash/Bell.mp3" autoplay loop></audio>
+	<div class="wrap wow fadeIn" data-wow-duration="2s">
 		<header>
 			<div class="header">
 				<div class="headerWrap">
-					<span><img src="./img/Index/logo.png">Plant</span>
+					<img src="./img/Index/logo.png">
+					<span>植物园</span>
 					<ul>
 						<li><a href="./index.html">首页</a></li>
 						<li><a href="./page/People.html">人员</a></li>
@@ -22,21 +23,21 @@
 			</div>
 		</header>
 		<article>
-			<div class="body">
-				<ul>
-					<li><a href="./page/Spring.html">春</a><span>春梦</span></li>
-					<li><a href="./page/Summer.html">夏</a><span>夏盈</span></li>
-					<li><a href="./page/Fall.html">秋</a><span>秋守</span></li>
-					<li><a href="./page/Winter.html">冬</a><span>冬安</span></li>
-				</ul>
-			</div>
-			<div class="pic">
-				<ul>
-					<li><img src="./img/Index/2.jpg"></li>
-					<li><img src="./img/Index/3.jpg"></li>
-					<li><img src="./img/Index/4.jpg"></li>
-					<li><img src="./img/Index/5.jpg"></li>
-				</ul>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+				    <div class="swiper-slide" style="background-image:url(./img/Index/1.jpg)">
+				    	<a href="./page/Spring.html" class="ani pic1" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">春</a>
+				    </div>
+				    <div class="swiper-slide" style="background-image:url(./img/Index/2.jpg)">
+				    	<a href="./page/Summer.html" class="ani pic1" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">夏</a>
+				    </div>
+				    <div class="swiper-slide" style="background-image:url(./img/Index/3.jpg)">
+				    	<a href="./page/Fall.html" class="ani pic1" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">秋</a>
+				    </div>
+				    <div class="swiper-slide" style="background-image:url(./img/Index/4.jpg)">
+				    	<a href="./page/Winter.html" class="ani pic1" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">冬</a>
+				    </div>
+			    </div>
 			</div>
 		</article>
 		<footer>
@@ -46,8 +47,27 @@
 		</footer>
 	</div>
 
+	
+	<script type="text/javascript" src="./js/wow/dist/wow.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/swiper.animate.min.js"></script>
 	<script type="text/javascript">
 		new WOW().init()
+	</script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', {
+			direction: 'horizontal',
+			speed: 1500,
+			loop: true,
+			autoplay: 5000,
+			onInit: function(swiper){
+			  swiperAnimateCache(swiper);
+			  swiperAnimate(swiper);
+			}, 
+			onSlideChangeEnd: function(swiper){ 
+			  swiperAnimate(swiper);
+			} 
+		})        
 	</script>
 </body>
 </html>

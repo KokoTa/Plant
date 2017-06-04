@@ -4,7 +4,7 @@
 }
 body {
 	font-family: "微软雅黑";
-	background: black;
+	background: url('../img/people/1.jpg') no-repeat center fixed;
 	width: 100%;
 	height: 100%;
 	display: -webkit-flex; /* Safari */
@@ -15,13 +15,13 @@ body {
 
 
 h1 {
-	color: white;
+	color: black;
 	font-size: 3em;
 	text-align: center;
 	padding: 10px;
 	background: border-left: ;
 	margin: 40px;
-	text-shadow: 5px 5px 5px #FF0000;
+	text-shadow: 0px 0px 50px white;
 }
 
 table {
@@ -42,7 +42,8 @@ table td {
 	transition: all .3s;
 }
 table td:hover {
-	background: white;
+	color: white;
+	background: black;
 	border-radius: 10px;
 	cursor: crosshair;
 }
@@ -54,7 +55,8 @@ object,table {
 	border-radius: 20px;
 }
 object:hover, table:hover {
-	box-shadow: 0px 0px 100px white;
+	background: white;
+	box-shadow: 0px 0px 100px lightgray;
 }
 
 .f {
@@ -62,13 +64,15 @@ object:hover, table:hover {
 	font-weight: bolder;
 	text-align: center;
 }
-
 .f hr {
 	margin: 10px 0;
-	border: 1px solid black;
+	border: 1px solid gray;
 }
 .f a {
 	font-size: 0.8em;
 	text-decoration: none;
-	color: brown;
+	color: gray;
+}
+.f:hover{
+	color: yellow;
 }
